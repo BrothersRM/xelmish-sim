@@ -17,18 +17,23 @@ let init () = {
 type Message =
     | Increment of amount: int
     | Decrement of amount: int
-    | Tick
+    | Tick of int64
       
 let update message model =
     match message with
     | Increment x -> {model with counter = model.counter + x;}  
     | Decrement x -> {model with counter = model.counter - x;}
-    | Tick -> model 
+    | Tick x -> {model with tickCount = x} 
     
 let view model dispatch =
     [
         yield text "defaultFont" 20. Colour.White (0., 0.) (sprintf "%i" model.counter) (300, 300)
-        yield onupdate (fun x -> dispatch (Increment 1))
+        yield onupdate (fun inputs ->
+            let interval = 1000L
+            if(inputs.totalGameTime - model.tickCount) >= interval then
+                dispatch (Tick inputs.totalGameTime)
+                dispatch (Increment 1)
+            )
     ]
 
 [<EntryPoint>]
@@ -42,5 +47,6 @@ let main _ =
         ]
     }
     Program.mkSimple init update view
+    |> Program.withConsoleTrace
     |> Xelmish.Program.runGameLoop config
     0
