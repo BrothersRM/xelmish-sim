@@ -34,6 +34,7 @@
         <e p="SourceCodePro-Semibold.ttf" t="Include" />
         <e p="SourceCodePro.spritefont" t="Include" />
       </e>
+      <e p="Controls.fs" t="Include" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />
       <e p="Program.fs" t="Include" />
