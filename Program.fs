@@ -4,14 +4,14 @@ open Xelmish.Viewables
 open xelmish_template.Controls
 
 type Model = {
-    boxes: (int*int) list
+    boxes: Map<(int*int), bool>
     tickCount: int64
 }
 
 
 let init () = {
     tickCount = 0L
-    boxes = [(10, 10); (100, 100)]
+    boxes = Map.ofList [(10, 10), true; (100, 100), true]
 }
 
 type Message =

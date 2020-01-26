@@ -11,8 +11,7 @@
           "FSharp.Core": "4.7.0",
           "MonoGame.Content.Builder": "3.7.0.4",
           "MonoGame.Framework.DesktopGL.Core": "3.7.0.7",
-          "xelmish": "0.0.1",
-          "Xelmish.Reference": "1.0.0.0"
+          "xelmish": "0.0.1"
         },
         "runtime": {
           "xelmish-sim.dll": {}
@@ -144,13 +143,11 @@
           "Elmish": "2.0.3",
           "FSharp.Core": "4.7.0",
           "MonoGame.Framework.DesktopGL.Core": "3.7.0.7"
-        }
-      },
-      "Xelmish.Reference/1.0.0.0": {
+        },
         "runtime": {
-          "Xelmish.dll": {
+          "lib/netstandard2.0/Xelmish.dll": {
             "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
+            "fileVersion": "0.0.0.0"
           }
         }
       }
@@ -196,11 +193,6 @@
       "sha512": "sha512-l783Yfkrk8B5oA+/kRFII4+njiODt55FibVKoEerAglS94bRr/BU/RxwR5G84ESl3plFadKvbqQ7PBEHfXht/g==",
       "path": "xelmish/0.0.1",
       "hashPath": "xelmish.0.0.1.nupkg.sha512"
-    },
-    "Xelmish.Reference/1.0.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
     }
   }
 }
